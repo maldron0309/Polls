@@ -10,5 +10,6 @@
 	main{
 		max-width: 960px;
 		margin: 40px auto;
+		padding: auto;
 	}				
 </style> 
