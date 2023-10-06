@@ -11,7 +11,7 @@
         color: #aaa;
         font-size: 15px;
         display: inline-block;
-        padding: 20px;
+        padding: 19px;
         border-top: solid #ddd;
     }
 </style>
