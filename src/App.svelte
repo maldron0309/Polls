@@ -1,11 +1,23 @@
 <script>
 	import Header from "./components/Header.svelte";
 	import Footer from "./components/Footer.svelte";
-</script>
+	import Tabs from "./shared/Tabs.svelte";
 
+	// tabs
+	let items = ['Current Polls', 'Add New Poll'];
+	let activeItem = 'Current Polls';
+	const tabChange = (e) =>{
+		activeItem = e.detail;
+	}
+</script> 
 <Header/>
 <main>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, maiores? Consequuntur velit culpa, error corporis nesciunt suscipit dolore esse nulla! Quod consequatur quos temporibus exercitationem. Perferendis magnam enim officiis ratione?</p>
+	<Tabs {activeItem} {items} on:tabChange={tabChange}/>
+	{#if activeItem === 'Current Polls'}
+		<p>Polls list componenet goes here</p>
+	{:else if activeItem === 'Add New Poll'}
+		<p>new poll form component goes here</p>
+	{/if}		
 </main>
 <Footer/>
 
